@@ -1,0 +1,50 @@
+{
+  "name": "e-manager",
+  "version": "1.0.0",
+   "type": "module",
+  "description": "E-commerce webside for products",
+  "main": "server.js",
+  "scripts": {
+  "start": "node backend/server.js",
+  "server": "nodemon backend/server",
+  "client": "npm start --prefix frontend",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "data:import": "node backend/seeder",
+  "data:destroy": "node backend/seeder -d",
+  "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm install --prefix frontend && npm run build --prefix frontend"
+},
+  "keywords": [
+    "node"
+  ],
+  "author": "Saurabh kumar",
+  "license": "ISC",
+  "dependencies": {
+    "@paypal/react-paypal-js": "^8.8.1",
+    "@reduxjs/toolkit": "^2.5.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.6",
+    "multer": "^1.4.5-lts.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.4.0",
+    "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.3",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
